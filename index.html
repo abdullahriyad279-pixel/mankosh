@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -25,7 +24,6 @@ animation:pageEnter .8s ease both;
 }
 
 a{text-decoration:none;color:inherit}
-
 button{font-family:inherit}
 
 .nav{
@@ -83,7 +81,6 @@ transition:width .3s ease;
 }
 
 .links a:hover{color:#5c412c}
-
 .links a:hover::after{width:100%}
 
 .cart{
@@ -435,14 +432,8 @@ to{opacity:1}
 }
 
 @keyframes navDrop{
-from{
-opacity:0;
-transform:translateY(-25px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+from{opacity:0;transform:translateY(-25px)}
+to{opacity:1;transform:translateY(0)}
 }
 
 @keyframes brandReveal{
@@ -575,7 +566,6 @@ transition-duration:.01ms !important;
 }
 
 }
-
 </style>
 </head>
 
@@ -764,44 +754,70 @@ id="toast">
 const WHATSAPP_NUMBER="201553320406";
 
 
-/* المنتجات */
+/* =================================================
+   المنتجات
+   =================================================
+
+   كل منتج له مكان مخصص للصورة في خانة image.
+
+   مثال:
+   image:"images/wall-hanging.png"
+
+   يعني:
+   - افتح مجلد images
+   - ضع الصورة بداخله
+   - سمِّها wall-hanging.png
+
+   ================================================= */
 
 const products=[
 
+/* المنتج 1 */
 {
 name:"Macrame Wall Hanging",
 price:450,
-desc:"قطعة حائط يدوية أنيقة"
+desc:"قطعة حائط يدوية أنيقة",
+image:"images/wall-hanging.png"
 },
 
+/* المنتج 2 */
 {
 name:"Boho Plant Hanger",
 price:300,
-desc:"حامل نباتات بتصميم بوهيمي"
+desc:"حامل نباتات بتصميم بوهيمي",
+image:"images/plant-hanger.png"
 },
 
+/* المنتج 3 */
 {
 name:"Macrame Mirror",
 price:650,
-desc:"مرآة بإطار مكرمية مميز"
+desc:"مرآة بإطار مكرمية مميز",
+image:"images/macrame-mirror.png"
 },
 
+/* المنتج 4 */
 {
 name:"Decorative Knot",
 price:220,
-desc:"ديكور مكرمية بسيط وأنيق"
+desc:"ديكور مكرمية بسيط وأنيق",
+image:"images/decorative-knot.png"
 },
 
+/* المنتج 5 */
 {
 name:"Macrame Gift",
 price:380,
-desc:"قطعة مناسبة للهدايا"
+desc:"قطعة مناسبة للهدايا",
+image:"images/macrame-gift.png"
 },
 
+/* المنتج 6 */
 {
 name:"Custom Macrame",
 price:800,
-desc:"تصميم مخصص حسب طلبك"
+desc:"تصميم مخصص حسب طلبك",
+image:"images/custom-macrame.png"
 }
 
 ];
@@ -822,7 +838,12 @@ grid.innerHTML+=`
 <div class="card">
 
 <div class="pic">
-صورة المنتج ${i+1}
+
+<img
+src="${p.image}"
+alt="${p.name}"
+onerror="this.style.display='none';this.parentElement.innerHTML='<span>صورة المنتج ${i+1}</span>'">
+
 </div>
 
 <div class="info">
