@@ -11,9 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
@@ -23,8 +28,19 @@ color:#3d2c20;
 animation:pageEnter .8s ease both;
 }
 
-a{text-decoration:none;color:inherit}
-button{font-family:inherit}
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button{
+font-family:inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 .nav{
 position:sticky;
@@ -80,8 +96,18 @@ background:#5c412c;
 transition:width .3s ease;
 }
 
-.links a:hover{color:#5c412c}
-.links a:hover::after{width:100%}
+.links a:hover{
+color:#5c412c;
+}
+
+.links a:hover::after{
+width:100%;
+}
+
+
+/* =========================
+   CART BUTTON
+========================= */
 
 .cart{
 border:1px solid #cbb39a;
@@ -100,6 +126,11 @@ background:#f0e1cf;
 .cart.cart-bump{
 animation:cartBump .5s ease;
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 max-width:1150px;
@@ -153,6 +184,11 @@ transition:transform .6s ease;
 transform:scale(1.03);
 }
 
+
+/* =========================
+   BUTTON
+========================= */
+
 .btn{
 display:inline-block;
 background:#5c412c;
@@ -170,7 +206,14 @@ transform:translateY(-2px);
 box-shadow:0 8px 18px rgba(92,65,44,.20);
 }
 
-.btn:active{transform:scale(.96)}
+.btn:active{
+transform:scale(.96);
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
 
 .section{
 max-width:1150px;
@@ -200,6 +243,11 @@ grid-template-columns:repeat(3,1fr);
 gap:22px;
 }
 
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
 .card{
 background:#fffaf4;
 border:1px solid #eadcca;
@@ -224,28 +272,50 @@ transform:translateY(-9px) scale(1.015);
 box-shadow:0 18px 40px rgba(70,45,25,.13);
 }
 
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+/*
+   مهم:
+   الصورة أصبحت تظهر كاملة
+   object-fit: contain
+   بدل cover
+*/
+
 .pic{
-height:220px;
-background:#e8d8c4;
+height:380px;
+background:#f3e8da;
 display:flex;
 align-items:center;
 justify-content:center;
 color:#806a56;
 overflow:hidden;
+cursor:pointer;
+padding:12px;
 }
 
 .pic img{
 width:100%;
 height:100%;
-object-fit:cover;
+object-fit:contain;
+border-radius:12px;
 transition:transform .5s ease;
 }
 
 .card:hover .pic img{
-transform:scale(1.06);
+transform:scale(1.03);
 }
 
-.info{padding:18px}
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.info{
+padding:18px;
+}
 
 .info h3{
 margin:0 0 8px;
@@ -257,7 +327,14 @@ font-weight:bold;
 margin:10px 0 15px;
 }
 
-.add{width:100%}
+.add{
+width:100%;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
 
 .about{
 background:#eadcc9;
@@ -288,12 +365,22 @@ font-family:'Cormorant Garamond',serif;
 font-size:36px;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 text-align:center;
 padding:35px;
 background:#3d2c20;
 color:#f8eee3;
 }
+
+
+/* =========================
+   CART MODAL
+========================= */
 
 .modal{
 display:none;
@@ -331,7 +418,9 @@ padding:15px 0;
 border-bottom:1px solid #eadcca;
 }
 
-.cartinfo{flex:1}
+.cartinfo{
+flex:1;
+}
 
 .cartname{
 font-weight:bold;
@@ -404,6 +493,54 @@ background:white;
 font-family:Arial,Tahoma,sans-serif;
 }
 
+
+/* =========================
+   IMAGE FULLSCREEN
+========================= */
+
+.image-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(30,20,10,.88);
+z-index:1000;
+align-items:center;
+justify-content:center;
+padding:25px;
+}
+
+.image-modal img{
+max-width:95%;
+max-height:90vh;
+object-fit:contain;
+border-radius:18px;
+box-shadow:0 15px 50px rgba(0,0,0,.35);
+}
+
+.image-close{
+position:absolute;
+top:20px;
+left:25px;
+width:45px;
+height:45px;
+border:0;
+border-radius:50%;
+background:#fffaf4;
+color:#3d2c20;
+font-size:30px;
+cursor:pointer;
+z-index:1001;
+}
+
+.image-close:hover{
+transform:scale(1.08);
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
 .toast{
 position:fixed;
 bottom:25px;
@@ -426,14 +563,29 @@ transform:translateX(-50%) translateY(0);
 animation:toastPop .35s ease both;
 }
 
+
+/* =========================
+   ANIMATIONS
+========================= */
+
 @keyframes pageEnter{
-from{opacity:0}
-to{opacity:1}
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
 }
 
 @keyframes navDrop{
-from{opacity:0;transform:translateY(-25px)}
-to{opacity:1;transform:translateY(0)}
+from{
+opacity:0;
+transform:translateY(-25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 @keyframes brandReveal{
@@ -472,16 +624,30 @@ transform:translateX(0) scale(1);
 }
 
 @keyframes cartBump{
-0%{transform:scale(1)}
-30%{transform:scale(1.12)}
-55%{transform:scale(.94)}
-80%{transform:scale(1.05)}
-100%{transform:scale(1)}
+0%{
+transform:scale(1);
+}
+30%{
+transform:scale(1.12);
+}
+55%{
+transform:scale(.94);
+}
+80%{
+transform:scale(1.05);
+}
+100%{
+transform:scale(1);
+}
 }
 
 @keyframes modalBackground{
-from{opacity:0}
-to{opacity:1}
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
 }
 
 @keyframes cartOpen{
@@ -504,6 +670,11 @@ transform:translateX(-50%) translateY(0) scale(1);
 }
 }
 
+
+/* =========================
+   TABLET
+========================= */
+
 @media(max-width:800px){
 
 .hero{
@@ -523,7 +694,16 @@ grid-template-columns:1fr 1fr;
 display:none;
 }
 
+.pic{
+height:350px;
 }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:520px){
 
@@ -553,7 +733,31 @@ width:28px;
 height:28px;
 }
 
+.pic{
+height:380px;
+padding:10px;
 }
+
+.image-modal{
+padding:15px;
+}
+
+.image-modal img{
+max-width:100%;
+max-height:85vh;
+}
+
+.image-close{
+top:15px;
+left:15px;
+}
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -566,10 +770,17 @@ transition-duration:.01ms !important;
 }
 
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <nav class="nav">
 
@@ -604,6 +815,10 @@ onclick="openCart()">
 </nav>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
 
 <div>
@@ -632,6 +847,10 @@ alt="Marmar Macrame">
 </section>
 
 
+<!-- =========================
+     PRODUCTS
+========================= -->
+
 <section class="section" id="products">
 
 <h2 class="title">
@@ -645,6 +864,10 @@ id="productGrid">
 
 </section>
 
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="section" id="about">
 
@@ -666,12 +889,20 @@ id="productGrid">
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 © 2026 Marmar — Macrame Art & Crafts
 
 </footer>
 
+
+<!-- =========================
+     CART
+========================= -->
 
 <div class="modal" id="modal">
 
@@ -739,6 +970,35 @@ onclick="orderWhatsApp()">
 </div>
 
 
+<!-- =========================
+     IMAGE FULLSCREEN MODAL
+========================= -->
+
+<div
+class="image-modal"
+id="imageModal"
+onclick="closeImage(event)">
+
+<button
+class="image-close"
+onclick="closeImage()">
+
+×
+
+</button>
+
+<img
+id="largeImage"
+src=""
+alt="صورة المنتج">
+
+</div>
+
+
+<!-- =========================
+     TOAST
+========================= -->
+
 <div
 class="toast"
 id="toast">
@@ -750,25 +1010,17 @@ id="toast">
 
 <script>
 
-/* رقم واتساب البراند */
+
+/* =========================
+   رقم واتساب البراند
+========================= */
+
 const WHATSAPP_NUMBER="201553320406";
 
 
-/* =================================================
+/* =========================
    المنتجات
-   =================================================
-
-   كل منتج له مكان مخصص للصورة في خانة image.
-
-   مثال:
-   image:"images/wall-hanging.png"
-
-   يعني:
-   - افتح مجلد images
-   - ضع الصورة بداخله
-   - سمِّها wall-hanging.png
-
-   ================================================= */
+========================= */
 
 const products=[
 
@@ -826,7 +1078,9 @@ image:"images/custom-macrame.png"
 let cart=[];
 
 
-/* عرض المنتجات */
+/* =========================
+   عرض المنتجات
+========================= */
 
 const grid=
 document.getElementById("productGrid");
@@ -837,7 +1091,9 @@ grid.innerHTML+=`
 
 <div class="card">
 
-<div class="pic">
+<div
+class="pic"
+onclick="openImage(${i})">
 
 <img
 src="${p.image}"
@@ -873,7 +1129,9 @@ onclick="addToCart(${i})">
 });
 
 
-/* Animation أثناء النزول */
+/* =========================
+   Animation أثناء النزول
+========================= */
 
 const animationObserver=
 new IntersectionObserver(
@@ -929,7 +1187,9 @@ animationObserver.observe(about);
 });
 
 
-/* إضافة للسلة */
+/* =========================
+   إضافة للسلة
+========================= */
 
 function addToCart(index){
 
@@ -958,7 +1218,9 @@ bumpCart();
 }
 
 
-/* حركة السلة */
+/* =========================
+   حركة السلة
+========================= */
 
 function bumpCart(){
 
@@ -976,7 +1238,9 @@ cartButton.classList.add("cart-bump");
 }
 
 
-/* الرسالة */
+/* =========================
+   الرسالة
+========================= */
 
 function showToast(
 message="تمت إضافة المنتج للسلة ✓"
@@ -998,7 +1262,9 @@ toast.classList.remove("show");
 }
 
 
-/* تحديث السلة */
+/* =========================
+   تحديث السلة
+========================= */
 
 function updateCart(){
 
@@ -1099,7 +1365,9 @@ document.getElementById("total")
 }
 
 
-/* تعديل الكمية */
+/* =========================
+   تعديل الكمية
+========================= */
 
 function changeQuantity(index,change){
 
@@ -1124,7 +1392,9 @@ updateCart();
 }
 
 
-/* حذف المنتج */
+/* =========================
+   حذف المنتج
+========================= */
 
 function removeFromCart(index){
 
@@ -1138,7 +1408,9 @@ showToast("تم حذف المنتج من السلة");
 }
 
 
-/* فتح السلة */
+/* =========================
+   فتح السلة
+========================= */
 
 function openCart(){
 
@@ -1150,7 +1422,9 @@ document.getElementById("modal")
 }
 
 
-/* إغلاق السلة */
+/* =========================
+   إغلاق السلة
+========================= */
 
 function closeCart(){
 
@@ -1160,7 +1434,52 @@ document.getElementById("modal")
 }
 
 
-/* إرسال الطلب إلى WhatsApp */
+/* =========================
+   تكبير صورة المنتج
+========================= */
+
+function openImage(index){
+
+const product=
+products[index];
+
+const largeImage=
+document.getElementById("largeImage");
+
+largeImage.src=
+product.image;
+
+document.getElementById("imageModal")
+.style.display="flex";
+
+}
+
+
+/* =========================
+   إغلاق صورة المنتج
+========================= */
+
+function closeImage(event){
+
+if(
+event &&
+event.target.id!=="imageModal"
+){
+return;
+}
+
+document.getElementById("imageModal")
+.style.display="none";
+
+document.getElementById("largeImage")
+.src="";
+
+}
+
+
+/* =========================
+   إرسال الطلب إلى WhatsApp
+========================= */
 
 function orderWhatsApp(){
 
@@ -1175,17 +1494,20 @@ return;
 const name=
 document.getElementById("name")
 .value.trim()
-||"غير محدد";
+||
+"غير محدد";
 
 const phone=
 document.getElementById("phone")
 .value.trim()
-||"غير محدد";
+||
+"غير محدد";
 
 const address=
 document.getElementById("address")
 .value.trim()
-||"غير محدد";
+||
+"غير محدد";
 
 
 let message=
@@ -1256,7 +1578,9 @@ whatsappURL,
 }
 
 
-/* إغلاق السلة عند الضغط خارجها */
+/* =========================
+   إغلاق السلة عند الضغط خارجها
+========================= */
 
 document
 .getElementById("modal")
@@ -1271,6 +1595,25 @@ closeCart();
 }
 
 });
+
+
+/* =========================
+   إغلاق الصورة بزر ESC
+========================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Escape"){
+
+document.getElementById("imageModal")
+.style.display="none";
+
+}
+
+});
+
 
 </script>
 
