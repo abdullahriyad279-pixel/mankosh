@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -11,15 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
 
 *{
 box-sizing:border-box;
@@ -48,7 +41,7 @@ font-family:inherit;
 
 
 /* =========================
-   NAVBAR
+NAVBAR
 ========================= */
 
 .nav{
@@ -116,7 +109,7 @@ width:100%;
 
 
 /* =========================
-   NAV PRODUCTS MENU
+PRODUCTS NAV MENU
 ========================= */
 
 .products-menu{
@@ -154,12 +147,9 @@ border:1px solid #eadcca;
 border-radius:16px;
 box-shadow:0 15px 35px rgba(70,45,25,.15);
 padding:8px;
-
 opacity:0;
 visibility:hidden;
-
 transform:translateY(-8px);
-
 transition:.25s ease;
 z-index:300;
 }
@@ -174,17 +164,13 @@ transform:translateY(0);
 display:block;
 width:100%;
 text-align:right;
-
 border:0;
 background:transparent;
-
 padding:12px 14px;
 border-radius:10px;
-
 color:#3d2c20;
 cursor:pointer;
 font-size:14px;
-
 transition:.2s;
 }
 
@@ -195,7 +181,7 @@ transform:translateX(-3px);
 
 
 /* =========================
-   CART
+CART
 ========================= */
 
 .cart{
@@ -218,17 +204,15 @@ animation:cartBump .5s ease;
 
 
 /* =========================
-   HERO
+HERO
 ========================= */
 
 .hero{
 max-width:1150px;
 margin:28px auto;
 padding:55px 35px;
-
 display:grid;
 grid-template-columns:1.1fr .9fr;
-
 gap:35px;
 align-items:center;
 }
@@ -238,56 +222,36 @@ font-family:'Cormorant Garamond',serif;
 font-size:68px;
 font-weight:700;
 letter-spacing:2px;
-
 margin:0 0 10px;
-
 line-height:1;
-
-animation:
-brandReveal 1s cubic-bezier(.2,.8,.2,1) both;
+animation:brandReveal 1s cubic-bezier(.2,.8,.2,1) both;
 }
 
 .hero p{
 font-size:18px;
 line-height:1.9;
-
 color:#6e5948;
-
 max-width:560px;
-
-animation:
-fadeUp 1s ease .25s both;
+animation:fadeUp 1s ease .25s both;
 }
 
 .hero .btn{
-animation:
-fadeUp 1s ease .45s both;
+animation:fadeUp 1s ease .45s both;
 }
 
 .heroimg{
 background:#eadcc9;
-
 border-radius:30px;
-
 padding:28px;
-
 text-align:center;
-
-animation:
-heroImageEnter
-1s cubic-bezier(.2,.8,.2,1)
-.25s both;
+animation:heroImageEnter 1s cubic-bezier(.2,.8,.2,1) .25s both;
 }
 
 .heroimg img{
 width:100%;
-
 max-height:380px;
-
 object-fit:contain;
-
 border-radius:20px;
-
 transition:transform .6s ease;
 }
 
@@ -297,33 +261,24 @@ transform:scale(1.03);
 
 
 /* =========================
-   BUTTON
+BUTTON
 ========================= */
 
 .btn{
 display:inline-block;
-
 background:#5c412c;
 color:white;
-
 padding:13px 24px;
-
 border-radius:30px;
-
 border:0;
-
 cursor:pointer;
-
 font-size:15px;
-
 transition:.2s;
 }
 
 .btn:hover{
 transform:translateY(-2px);
-
-box-shadow:
-0 8px 18px rgba(92,65,44,.20);
+box-shadow:0 8px 18px rgba(92,65,44,.20);
 }
 
 .btn:active{
@@ -332,93 +287,62 @@ transform:scale(.96);
 
 
 /* =========================
-   SECTION
+SECTION
 ========================= */
 
 .section{
 max-width:1150px;
-
 margin:20px auto 70px;
-
 padding:0 22px;
 }
 
 
 /* =========================
-   PRODUCTS TITLE
+PRODUCT TITLE
 ========================= */
 
 .title-row{
 position:relative;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 gap:10px;
-
 margin-bottom:30px;
 }
 
 .title{
 text-align:center;
-
 font-family:'Cormorant Garamond',serif;
-
 font-size:42px;
-
 font-weight:700;
-
 margin:0;
-
 opacity:0;
-
 transform:translateY(20px);
-
-transition:
-opacity .7s ease,
-transform .7s ease;
+transition:opacity .7s ease,transform .7s ease;
 }
 
 .title.show{
 opacity:1;
-
 transform:translateY(0);
 }
 
-
-/* سهم منتجاتنا */
-
 .title-arrow{
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 width:38px;
 height:38px;
-
 border-radius:50%;
-
 border:1px solid #d9c6b1;
-
 background:#fffaf4;
-
 cursor:pointer;
-
 color:#5c412c;
-
 font-size:15px;
-
 transition:.25s;
 }
 
 .title-arrow:hover{
 background:#eadcc9;
-
 transform:scale(1.08);
 }
 
@@ -428,122 +352,75 @@ transform:rotate(180deg);
 
 
 /* =========================
-   CATEGORY DROPDOWN
+CATEGORY DROPDOWN
 ========================= */
 
 .category-dropdown{
-
 position:absolute;
-
 top:55px;
-
 right:50%;
-
-transform:
-translateX(50%)
-translateY(-10px);
-
+transform:translateX(50%) translateY(-10px);
 width:240px;
-
 background:#fffaf4;
-
 border:1px solid #eadcca;
-
 border-radius:18px;
-
-box-shadow:
-0 15px 35px rgba(70,45,25,.15);
-
+box-shadow:0 15px 35px rgba(70,45,25,.15);
 padding:8px;
-
 opacity:0;
-
 visibility:hidden;
-
 transition:.25s ease;
-
 z-index:500;
 }
 
 .category-dropdown.open{
-
 opacity:1;
-
 visibility:visible;
-
-transform:
-translateX(50%)
-translateY(0);
+transform:translateX(50%) translateY(0);
 }
 
 .category-dropdown button{
-
 display:block;
-
 width:100%;
-
 text-align:right;
-
 border:0;
-
 background:transparent;
-
 padding:13px 14px;
-
 border-radius:10px;
-
 color:#3d2c20;
-
 cursor:pointer;
-
 font-size:14px;
-
 transition:.2s;
 }
 
 .category-dropdown button:hover{
-
 background:#eadcc9;
-
 transform:translateX(-3px);
 }
 
 
 /* =========================
-   PRODUCTS
+PRODUCTS
 ========================= */
 
 .products{
 display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
+grid-template-columns:repeat(3,1fr);
 gap:22px;
 }
 
 
 /* =========================
-   PRODUCT CARD
+PRODUCT CARD
 ========================= */
 
 .card{
-
 background:#fffaf4;
-
 border:1px solid #eadcca;
-
 border-radius:20px;
-
 overflow:hidden;
-
-box-shadow:
-0 8px 25px rgba(70,45,25,.06);
-
+box-shadow:0 8px 25px rgba(70,45,25,.06);
 opacity:0;
-
 transform:translateY(30px);
-
 transition:
 transform .35s ease,
 box-shadow .35s ease,
@@ -551,70 +428,47 @@ opacity .6s ease;
 }
 
 .card.show{
-
 opacity:1;
-
 transform:translateY(0);
 }
 
 .card:hover{
-
-transform:
-translateY(-9px)
-scale(1.015);
-
-box-shadow:
-0 18px 40px rgba(70,45,25,.13);
+transform:translateY(-9px) scale(1.015);
+box-shadow:0 18px 40px rgba(70,45,25,.13);
 }
 
 
 /* =========================
-   PRODUCT IMAGE
+PRODUCT IMAGE
 ========================= */
 
 .pic{
-
 height:380px;
-
 background:#f3e8da;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 color:#806a56;
-
 overflow:hidden;
-
 cursor:pointer;
-
 padding:12px;
 }
 
 .pic img{
-
 width:100%;
-
 height:100%;
-
 object-fit:contain;
-
 border-radius:12px;
-
-transition:
-transform .5s ease;
+transition:transform .5s ease;
 }
 
 .card:hover .pic img{
-
 transform:scale(1.03);
 }
 
 
 /* =========================
-   PRODUCT INFO
+PRODUCT INFO
 ========================= */
 
 .info{
@@ -622,16 +476,12 @@ padding:18px;
 }
 
 .info h3{
-
 margin:0 0 8px;
-
 font-size:19px;
 }
 
 .price{
-
 font-weight:bold;
-
 margin:10px 0 15px;
 }
 
@@ -641,94 +491,64 @@ width:100%;
 
 
 /* =========================
-   CATEGORY PAGE
+CATEGORY PAGE
 ========================= */
 
 .category-page{
-
 display:none;
-
 min-height:500px;
 }
 
 .category-page.active{
-
 display:block;
-
-animation:
-fadeUp .45s ease both;
+animation:fadeUp .45s ease both;
 }
 
 .category-header{
-
 text-align:center;
-
 margin-bottom:30px;
 }
 
 .category-header h2{
-
 font-family:'Cormorant Garamond',serif;
-
 font-size:42px;
-
 margin:0 0 8px;
 }
 
 .category-header p{
-
 color:#806a56;
-
 margin:0;
 }
 
 .back-btn{
-
 border:1px solid #cbb39a;
-
 background:#fff8ef;
-
 padding:9px 18px;
-
 border-radius:25px;
-
 cursor:pointer;
-
 margin-top:15px;
-
 transition:.2s;
 }
 
 .back-btn:hover{
-
 background:#eadcc9;
-
 transform:translateY(-2px);
 }
 
 
 /* =========================
-   ABOUT
+ABOUT
 ========================= */
 
 .about{
-
 background:#eadcc9;
-
 border-radius:25px;
-
 padding:40px;
-
 text-align:center;
-
 line-height:2;
-
 font-size:17px;
-
 opacity:0;
-
 transform:translateY(30px);
-
 transition:
 opacity .8s ease,
 transform .8s ease,
@@ -736,111 +556,70 @@ box-shadow .4s ease;
 }
 
 .about.show{
-
 opacity:1;
-
 transform:translateY(0);
 }
 
 .about:hover{
-
-box-shadow:
-0 15px 35px rgba(70,45,25,.08);
+box-shadow:0 15px 35px rgba(70,45,25,.08);
 }
 
 .about h2{
-
 font-family:'Cormorant Garamond',serif;
-
 font-size:36px;
 }
 
 
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
 
 footer{
-
 text-align:center;
-
 padding:35px;
-
 background:#3d2c20;
-
 color:#f8eee3;
 }
 
 
 /* =========================
-   CART MODAL
+CART
 ========================= */
 
 .modal{
-
 display:none;
-
 position:fixed;
-
 inset:0;
-
-background:
-rgba(30,20,10,.5);
-
+background:rgba(30,20,10,.5);
 z-index:200;
-
 padding:15px;
-
-animation:
-modalBackground .25s ease both;
+animation:modalBackground .25s ease both;
 }
 
 .box{
-
 background:#fffaf4;
-
 width:min(560px,100%);
-
 margin:5vh auto;
-
 padding:25px;
-
 border-radius:24px;
-
 max-height:90vh;
-
 overflow:auto;
-
-animation:
-cartOpen
-.35s
-cubic-bezier(.2,.8,.2,1)
-both;
+animation:cartOpen .35s cubic-bezier(.2,.8,.2,1) both;
 }
 
 .close{
-
 float:left;
-
 font-size:28px;
-
 cursor:pointer;
 }
 
 .cartrow{
-
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
 gap:12px;
-
 padding:15px 0;
-
-border-bottom:
-1px solid #eadcca;
+border-bottom:1px solid #eadcca;
 }
 
 .cartinfo{
@@ -848,585 +627,420 @@ flex:1;
 }
 
 .cartname{
-
 font-weight:bold;
-
 margin-bottom:6px;
 }
 
 .cartprice{
-
 font-size:14px;
-
 color:#806a56;
 }
 
 .quantity{
-
 display:flex;
-
 align-items:center;
-
 gap:8px;
 }
 
 .quantity button{
-
 width:30px;
-
 height:30px;
-
-border:
-1px solid #cbb39a;
-
+border:1px solid #cbb39a;
 background:#f7f1e8;
-
 border-radius:8px;
-
 cursor:pointer;
-
 font-size:18px;
-
 transition:.15s;
 }
 
 .quantity button:hover{
-
 transform:scale(1.1);
-
 background:#eadcc9;
 }
 
 .quantity button:active{
-
 transform:scale(.9);
 }
 
 .quantity span{
-
 min-width:25px;
-
 text-align:center;
-
 font-weight:bold;
 }
 
 .remove{
-
 border:0;
-
 background:none;
-
 cursor:pointer;
-
 font-size:18px;
-
 padding:5px;
-
 transition:.2s;
 }
 
 .remove:hover{
-
 transform:scale(1.15);
 }
 
 .totalbox{
-
 margin-top:20px;
-
 padding-top:15px;
-
-border-top:
-2px solid #e2d1bd;
+border-top:2px solid #e2d1bd;
 }
 
 input{
-
 width:100%;
-
 padding:12px;
-
-border:
-1px solid #d9c6b1;
-
+border:1px solid #d9c6b1;
 border-radius:10px;
-
 margin:6px 0 12px;
-
 background:white;
-
-font-family:
-Arial,Tahoma,sans-serif;
+font-family:Arial,Tahoma,sans-serif;
 }
 
 
 /* =========================
-   IMAGE FULLSCREEN
+IMAGE MODAL
 ========================= */
 
 .image-modal{
-
 display:none;
-
 position:fixed;
-
 inset:0;
-
-background:
-rgba(30,20,10,.88);
-
+background:rgba(30,20,10,.88);
 z-index:1000;
-
 align-items:center;
-
 justify-content:center;
-
 padding:25px;
 }
 
 .image-modal img{
-
 max-width:95%;
-
 max-height:90vh;
-
 object-fit:contain;
-
 border-radius:18px;
-
-box-shadow:
-0 15px 50px rgba(0,0,0,.35);
+box-shadow:0 15px 50px rgba(0,0,0,.35);
 }
 
 .image-close{
-
 position:absolute;
-
 top:20px;
-
 left:25px;
-
 width:45px;
-
 height:45px;
-
 border:0;
-
 border-radius:50%;
-
 background:#fffaf4;
-
 color:#3d2c20;
-
 font-size:30px;
-
 cursor:pointer;
-
 z-index:1001;
-}
-
-.image-close:hover{
-
-transform:scale(1.08);
 }
 
 
 /* =========================
-   TOAST
+TOAST
 ========================= */
 
 .toast{
-
 position:fixed;
-
 bottom:25px;
-
 left:50%;
-
-transform:
-translateX(-50%)
-translateY(20px);
-
+transform:translateX(-50%) translateY(20px);
 background:#5c412c;
-
 color:white;
-
 padding:12px 22px;
-
 border-radius:30px;
-
 opacity:0;
-
 pointer-events:none;
-
 transition:.3s;
-
 z-index:500;
-
 font-size:14px;
 }
 
 .toast.show{
-
 opacity:1;
-
-transform:
-translateX(-50%)
-translateY(0);
-
-animation:
-toastPop .35s ease both;
+transform:translateX(-50%) translateY(0);
+animation:toastPop .35s ease both;
 }
 
 
 /* =========================
-   ANIMATIONS
+ANIMATIONS
 ========================= */
 
 @keyframes pageEnter{
-
-from{
-opacity:0;
-}
-
-to{
-opacity:1;
-}
-
+from{opacity:0;}
+to{opacity:1;}
 }
 
 @keyframes navDrop{
-
 from{
-
 opacity:0;
-
-transform:
-translateY(-25px);
-
+transform:translateY(-25px);
 }
-
 to{
-
 opacity:1;
-
-transform:
-translateY(0);
-
+transform:translateY(0);
 }
-
 }
 
 @keyframes brandReveal{
-
 from{
-
 opacity:0;
-
-transform:
-translateY(25px);
-
+transform:translateY(25px);
 letter-spacing:8px;
-
 }
-
 to{
-
 opacity:1;
-
-transform:
-translateY(0);
-
+transform:translateY(0);
 letter-spacing:2px;
-
 }
-
 }
 
 @keyframes fadeUp{
-
 from{
-
 opacity:0;
-
-transform:
-translateY(20px);
-
+transform:translateY(20px);
 }
-
 to{
-
 opacity:1;
-
-transform:
-translateY(0);
-
+transform:translateY(0);
 }
-
 }
 
 @keyframes heroImageEnter{
-
 from{
-
 opacity:0;
-
-transform:
-translateX(35px)
-scale(.96);
-
+transform:translateX(35px) scale(.96);
 }
-
 to{
-
 opacity:1;
-
-transform:
-translateX(0)
-scale(1);
-
+transform:translateX(0) scale(1);
 }
-
 }
 
 @keyframes cartBump{
-
-0%{
-transform:scale(1);
-}
-
-30%{
-transform:scale(1.12);
-}
-
-55%{
-transform:scale(.94);
-}
-
-80%{
-transform:scale(1.05);
-}
-
-100%{
-transform:scale(1);
-}
-
+0%{transform:scale(1);}
+30%{transform:scale(1.12);}
+55%{transform:scale(.94);}
+80%{transform:scale(1.05);}
+100%{transform:scale(1);}
 }
 
 @keyframes modalBackground{
-
-from{
-opacity:0;
-}
-
-to{
-opacity:1;
-}
-
+from{opacity:0;}
+to{opacity:1;}
 }
 
 @keyframes cartOpen{
-
 from{
-
 opacity:0;
-
-transform:
-translateY(25px)
-scale(.97);
-
+transform:translateY(25px) scale(.97);
 }
-
 to{
-
 opacity:1;
-
-transform:
-translateY(0)
-scale(1);
-
+transform:translateY(0) scale(1);
 }
-
 }
 
 @keyframes toastPop{
-
 from{
-
-transform:
-translateX(-50%)
-translateY(20px)
-scale(.9);
-
+transform:translateX(-50%) translateY(20px) scale(.9);
 }
-
 to{
-
-transform:
-translateX(-50%)
-translateY(0)
-scale(1);
-
+transform:translateX(-50%) translateY(0) scale(1);
 }
-
 }
 
 
 /* =========================
-   TABLET
+TABLET
 ========================= */
 
 @media(max-width:800px){
 
 .hero{
-
 grid-template-columns:1fr;
-
 text-align:center;
 }
 
 .hero h1{
-
 font-size:58px;
 }
 
 .products{
-
-grid-template-columns:
-1fr 1fr;
+grid-template-columns:1fr 1fr;
+gap:15px;
 }
 
 .links{
-
 gap:12px;
 }
 
 .pic{
+height:300px;
+}
 
-height:350px;
+.info h3{
+font-size:17px;
 }
 
 }
 
 
 /* =========================
-   MOBILE
+MOBILE
 ========================= */
 
 @media(max-width:520px){
 
-.products{
+/* هنا أصبح منتجين جنب بعض */
 
-grid-template-columns:1fr;
+.products{
+grid-template-columns:1fr 1fr;
+gap:10px;
 }
 
-.navin{
 
+/* حجم الكارت على الموبايل */
+
+.card{
+border-radius:14px;
+}
+
+
+/* حجم صورة المنتج */
+
+.pic{
+height:230px;
+padding:6px;
+}
+
+
+/* بيانات المنتج */
+
+.info{
+padding:10px;
+}
+
+.info h3{
+font-size:14px;
+line-height:1.4;
+}
+
+.info p{
+font-size:12px;
+line-height:1.5;
+margin:5px 0;
+}
+
+.price{
+font-size:14px;
+margin:8px 0 10px;
+}
+
+.add{
+font-size:12px;
+padding:10px 5px;
+}
+
+
+/* النافبار */
+
+.navin{
 padding:8px 15px;
 }
 
 .logo{
-
 width:48px;
-
 height:48px;
 }
 
-.hero h1{
+.cart{
+padding:8px 10px;
+font-size:13px;
+}
 
+
+/* الهيرو */
+
+.hero h1{
 font-size:52px;
 }
 
+
+/* الروابط */
+
 .links{
-
 display:flex;
-
 gap:8px;
 }
 
 .links > a{
-
 display:none;
 }
 
-.products-menu-btn{
 
+/* قائمة المنتجات */
+
+.products-menu-btn{
 font-size:13px;
 }
 
 .products-dropdown{
-
 right:-40px;
-
 width:200px;
 }
 
-.cart{
 
-padding:8px 10px;
+/* قائمة التصنيفات */
 
-font-size:13px;
+.category-dropdown{
+width:220px;
+top:52px;
 }
 
-.cartrow{
 
+/* العنوان */
+
+.title{
+font-size:38px;
+}
+
+
+/* السلة */
+
+.cartrow{
 gap:7px;
 }
 
 .quantity button{
-
 width:28px;
-
 height:28px;
 }
 
-.pic{
 
-height:380px;
-
-padding:10px;
-}
+/* الصورة المكبرة */
 
 .image-modal{
-
 padding:15px;
 }
 
 .image-modal img{
-
 max-width:100%;
-
 max-height:85vh;
 }
 
 .image-close{
-
 top:15px;
-
 left:15px;
-}
-
-
-/* قائمة التصنيفات على الموبايل */
-
-.category-dropdown{
-
-width:220px;
-
-top:52px;
-}
-
-.title{
-
-font-size:38px;
 }
 
 }
 
 
 /* =========================
-   REDUCED MOTION
+REDUCED MOTION
 ========================= */
 
 @media(prefers-reduced-motion:reduce){
@@ -1434,13 +1048,9 @@ font-size:38px;
 *,
 *::before,
 *::after{
-
 animation-duration:.01ms !important;
-
 animation-iteration-count:1 !important;
-
 transition-duration:.01ms !important;
-
 }
 
 }
@@ -1454,7 +1064,7 @@ transition-duration:.01ms !important;
 
 
 <!-- =========================
-     NAVBAR
+NAVBAR
 ========================= -->
 
 <nav class="nav">
@@ -1476,10 +1086,10 @@ alt="Marmar">
 </a>
 
 
-<!-- منتجاتنا في النافبار -->
-
-<div class="products-menu"
+<div
+class="products-menu"
 id="productsMenu">
+
 
 <button
 class="products-menu-btn"
@@ -1546,11 +1156,8 @@ class="cart"
 onclick="openCart()">
 
 🛒 السلة
-
 (
-<span id="count">
-0
-</span>
+<span id="count">0</span>
 )
 
 </button>
@@ -1562,7 +1169,7 @@ onclick="openCart()">
 
 
 <!-- =========================
-     HERO
+HERO
 ========================= -->
 
 <section
@@ -1572,19 +1179,14 @@ id="home">
 
 <div>
 
-
 <h1>
 Marmar
 </h1>
 
-
 <p>
-
 تفاصيل مصنوعة بحب من فن المكرميات.
 قطع يدوية مودرن تضيف لمسة دافئة ومميزة لكل مكان.
-
 </p>
-
 
 <a
 class="btn"
@@ -1594,26 +1196,22 @@ href="#products">
 
 </a>
 
-
 </div>
 
 
 <div class="heroimg">
 
-
 <img
 src="شعار ماكرامي فاخر باسم مارمار.png"
 alt="Marmar Macrame">
 
-
 </div>
-
 
 </section>
 
 
 <!-- =========================
-     PRODUCTS
+PRODUCTS
 ========================= -->
 
 <section
@@ -1629,8 +1227,6 @@ id="products">
 </h2>
 
 
-<!-- المثلث الصحيح -->
-
 <button
 class="title-arrow"
 id="categoryArrow"
@@ -1641,64 +1237,41 @@ onclick="toggleCategoryDropdown()">
 </button>
 
 
-<!-- قائمة التصنيفات -->
-
 <div
 class="category-dropdown"
 id="categoryDropdown">
 
 
 <button onclick="openCategory('all')">
-
 🛍️ كل المنتجات
-
 </button>
-
 
 <button onclick="openCategory('wall')">
-
 🪢 مكرميات حائط
-
 </button>
-
 
 <button onclick="openCategory('plant')">
-
 🪴 حوامل نباتات
-
 </button>
-
 
 <button onclick="openCategory('mirror')">
-
 🪞 مرايات
-
 </button>
-
 
 <button onclick="openCategory('decor')">
-
 ✨ ديكورات
-
 </button>
-
 
 <button onclick="openCategory('gift')">
-
 🎁 هدايا
-
 </button>
 
-
 <button onclick="openCategory('custom')">
-
 🧶 تصميمات مخصصة
-
 </button>
 
 
 </div>
-
 
 </div>
 
@@ -1713,7 +1286,7 @@ id="productGrid">
 
 
 <!-- =========================
-     CATEGORY PAGE
+CATEGORY PAGE
 ========================= -->
 
 <section
@@ -1724,19 +1297,13 @@ id="categoryPage">
 <div class="category-header">
 
 
-<h2
-id="categoryTitle">
-
+<h2 id="categoryTitle">
 منتجات القسم
-
 </h2>
 
 
-<p
-id="categoryDescription">
-
+<p id="categoryDescription">
 اختار القطعة المناسبة لك
-
 </p>
 
 
@@ -1762,7 +1329,7 @@ id="categoryGrid">
 
 
 <!-- =========================
-     ABOUT
+ABOUT
 ========================= -->
 
 <section
@@ -1772,22 +1339,16 @@ id="about">
 
 <div class="about">
 
-
 <h2>
 عن Marmar
 </h2>
 
-
 <p>
-
 براند متخصص في المكرميات اليدوية
 بتصميمات عصرية وبسيطة.
-
 كل قطعة مصنوعة باهتمام بالتفاصيل
 لتكون مناسبة للديكور والهدايا.
-
 </p>
-
 
 </div>
 
@@ -1795,7 +1356,7 @@ id="about">
 
 
 <!-- =========================
-     FOOTER
+FOOTER
 ========================= -->
 
 <footer>
@@ -1806,7 +1367,7 @@ id="about">
 
 
 <!-- =========================
-     CART
+CART
 ========================= -->
 
 <div
@@ -1831,13 +1392,10 @@ onclick="closeCart()">
 </h2>
 
 
-<div
-id="cartItems">
-</div>
+<div id="cartItems"></div>
 
 
 <div class="totalbox">
-
 
 <h3>
 
@@ -1851,34 +1409,24 @@ id="cartItems">
 
 </h3>
 
-
 </div>
 
 
-<label>
-الاسم
-</label>
-
+<label>الاسم</label>
 
 <input
 id="name"
 placeholder="اكتب اسمك">
 
 
-<label>
-رقم الهاتف
-</label>
-
+<label>رقم الهاتف</label>
 
 <input
 id="phone"
 placeholder="01xxxxxxxxx">
 
 
-<label>
-العنوان
-</label>
-
+<label>العنوان</label>
 
 <input
 id="address"
@@ -1901,7 +1449,7 @@ onclick="orderWhatsApp()">
 
 
 <!-- =========================
-     IMAGE MODAL
+IMAGE MODAL
 ========================= -->
 
 <div
@@ -1929,7 +1477,7 @@ alt="صورة المنتج">
 
 
 <!-- =========================
-     TOAST
+TOAST
 ========================= -->
 
 <div
@@ -1943,102 +1491,65 @@ id="toast">
 
 <script>
 
-
 /* =========================
-   WHATSAPP
+WHATSAPP
 ========================= */
 
 const WHATSAPP_NUMBER="201553320406";
 
 
 /* =========================
-   PRODUCTS
+PRODUCTS
 ========================= */
 
 const products=[
 
-
 {
 name:"Macrame Wall Hanging",
-
 price:450,
-
 desc:"قطعة حائط يدوية أنيقة",
-
 image:"marmar_modern_decor.png",
-
 category:"wall"
-
 },
-
 
 {
 name:"Boho Plant Hanger",
-
 price:300,
-
 desc:"حامل نباتات بتصميم بوهيمي",
-
 image:"modern_boho_living_room.png",
-
 category:"plant"
-
 },
-
 
 {
 name:"Macrame Mirror",
-
 price:650,
-
 desc:"مرآة بإطار مكرمية مميز",
-
 image:"مرايه.png",
-
 category:"mirror"
-
 },
-
 
 {
 name:"Decorative Knot",
-
 price:220,
-
 desc:"ديكور مكرمية بسيط وأنيق",
-
 image:"حائط_3x4.png",
-
 category:"decor"
-
 },
-
 
 {
 name:"Macrame Gift",
-
 price:380,
-
 desc:"قطعة مناسبة للهدايا",
-
 image:"images/macrame-gift.png",
-
 category:"gift"
-
 },
-
 
 {
 name:"Custom Macrame",
-
 price:800,
-
 desc:"تصميم مخصص حسب طلبك",
-
 image:"images/custom-macrame.png",
-
 category:"custom"
-
 }
 
 ];
@@ -2046,42 +1557,35 @@ category:"custom"
 
 const categoryNames={
 
-
 all:{
 title:"كل منتجات Marmar",
 description:"اكتشف جميع منتجاتنا"
 },
-
 
 wall:{
 title:"مكرميات الحائط",
 description:"قطع مكرمية أنيقة لتزيين الحوائط"
 },
 
-
 plant:{
 title:"حوامل النباتات",
 description:"حوامل نباتات بتصميمات مميزة"
 },
-
 
 mirror:{
 title:"المرايات",
 description:"مرايات بإطارات مكرمية أنيقة"
 },
 
-
 decor:{
 title:"الديكورات",
 description:"قطع ديكور تضيف لمسة مميزة للمكان"
 },
 
-
 gift:{
 title:"الهدايا",
 description:"اختيارات مميزة للهدايا"
 },
-
 
 custom:{
 title:"التصميمات المخصصة",
@@ -2095,7 +1599,7 @@ let cart=[];
 
 
 /* =========================
-   CREATE PRODUCT CARD
+CREATE CARD
 ========================= */
 
 function createProductCard(p,index){
@@ -2119,26 +1623,19 @@ this.parentElement.innerHTML='<span>صورة المنتج</span>'
 
 </div>
 
-
 <div class="info">
-
 
 <h3>
 ${p.name}
 </h3>
 
-
 <p>
 ${p.desc}
 </p>
 
-
 <div class="price">
-
 ${p.price} جنيه
-
 </div>
-
 
 <button
 class="btn add"
@@ -2147,7 +1644,6 @@ onclick="addToCart(${index})">
 أضف للسلة
 
 </button>
-
 
 </div>
 
@@ -2159,14 +1655,13 @@ onclick="addToCart(${index})">
 
 
 /* =========================
-   RENDER PRODUCTS
+RENDER
 ========================= */
 
 function renderAllProducts(){
 
 const grid=
 document.getElementById("productGrid");
-
 
 grid.innerHTML=
 products
@@ -2175,28 +1670,22 @@ createProductCard(p,i)
 )
 .join("");
 
-
 animateCards(grid);
 
 }
 
 
 /* =========================
-   CATEGORY DROPDOWN
+CATEGORY DROPDOWN
 ========================= */
 
 function toggleCategoryDropdown(){
 
 const dropdown=
-document.getElementById(
-"categoryDropdown"
-);
+document.getElementById("categoryDropdown");
 
 const arrow=
-document.getElementById(
-"categoryArrow"
-);
-
+document.getElementById("categoryArrow");
 
 dropdown.classList.toggle("open");
 
@@ -2205,77 +1694,47 @@ arrow.classList.toggle("active");
 }
 
 
-/* =========================
-   CLOSE CATEGORY DROPDOWN
-========================= */
-
 function closeCategoryDropdown(){
 
 const dropdown=
-document.getElementById(
-"categoryDropdown"
-);
+document.getElementById("categoryDropdown");
 
 const arrow=
-document.getElementById(
-"categoryArrow"
-);
+document.getElementById("categoryArrow");
 
-
-if(dropdown){
-
+if(dropdown)
 dropdown.classList.remove("open");
 
-}
-
-
-if(arrow){
-
+if(arrow)
 arrow.classList.remove("active");
 
 }
 
-}
-
 
 /* =========================
-   NAVBAR MENU
+NAV MENU
 ========================= */
 
 function toggleProductsMenu(){
 
-const menu=
-document.getElementById(
-"productsMenu"
-);
-
-menu.classList.toggle("open");
+document
+.getElementById("productsMenu")
+.classList.toggle("open");
 
 }
 
-
-/* =========================
-   CLOSE NAVBAR MENU
-========================= */
 
 function closeProductsMenu(){
 
-const menu=
-document.getElementById(
-"productsMenu"
-);
-
-if(menu){
-
-menu.classList.remove("open");
-
-}
+document
+.getElementById("productsMenu")
+.classList.remove("open");
 
 }
 
 
 /* =========================
-   OPEN CATEGORY
+OPEN CATEGORY
 ========================= */
 
 function openCategory(category){
@@ -2284,55 +1743,37 @@ closeCategoryDropdown();
 
 closeProductsMenu();
 
-
 const allProducts=
-document.getElementById(
-"products"
-);
+document.getElementById("products");
 
 const categoryPage=
-document.getElementById(
-"categoryPage"
-);
+document.getElementById("categoryPage");
 
 const categoryGrid=
-document.getElementById(
-"categoryGrid"
-);
+document.getElementById("categoryGrid");
 
 const categoryTitle=
-document.getElementById(
-"categoryTitle"
-);
+document.getElementById("categoryTitle");
 
 const categoryDescription=
-document.getElementById(
-"categoryDescription"
-);
-
+document.getElementById("categoryDescription");
 
 const info=
 categoryNames[category];
 
-
 categoryTitle.textContent=
 info.title;
-
 
 categoryDescription.textContent=
 info.description;
 
-
 let filtered=[];
-
 
 if(category==="all"){
 
 filtered=products;
 
-}
-
-else{
+}else{
 
 filtered=
 products.filter(
@@ -2340,7 +1781,6 @@ p=>p.category===category
 );
 
 }
-
 
 categoryGrid.innerHTML=
 filtered
@@ -2357,14 +1797,9 @@ originalIndex
 })
 .join("");
 
-
 allProducts.style.display="none";
 
-
-categoryPage.classList.add(
-"active"
-);
-
+categoryPage.classList.add("active");
 
 window.scrollTo({
 
@@ -2375,40 +1810,28 @@ behavior:"smooth"
 
 });
 
-
 animateCards(categoryGrid);
 
 }
 
 
 /* =========================
-   SHOW ALL PRODUCTS
+SHOW ALL
 ========================= */
 
 function showAllProducts(){
 
 const categoryPage=
-document.getElementById(
-"categoryPage"
-);
+document.getElementById("categoryPage");
 
 const productsSection=
-document.getElementById(
-"products"
-);
+document.getElementById("products");
 
+categoryPage.classList.remove("active");
 
-categoryPage.classList.remove(
-"active"
-);
-
-
-productsSection.style.display=
-"block";
-
+productsSection.style.display="block";
 
 renderAllProducts();
-
 
 window.scrollTo({
 
@@ -2423,23 +1846,19 @@ behavior:"smooth"
 
 
 /* =========================
-   CARD ANIMATION
+ANIMATION
 ========================= */
 
 function animateCards(container){
 
 const cards=
-container.querySelectorAll(
-".card"
-);
-
+container.querySelectorAll(".card");
 
 cards.forEach(
 (card,index)=>{
 
 card.style.transitionDelay=
 (index*.08)+"s";
-
 
 setTimeout(()=>{
 
@@ -2453,7 +1872,7 @@ card.classList.add("show");
 
 
 /* =========================
-   ADD TO CART
+ADD CART
 ========================= */
 
 function addToCart(index){
@@ -2463,25 +1882,18 @@ cart.find(
 item=>item.index===index
 );
 
-
 if(existing){
 
 existing.quantity++;
 
-}
-
-else{
+}else{
 
 cart.push({
-
 index:index,
-
 quantity:1
-
 });
 
 }
-
 
 updateCart();
 
@@ -2493,37 +1905,27 @@ bumpCart();
 
 
 /* =========================
-   CART BUMP
+CART BUMP
 ========================= */
 
 function bumpCart(){
 
 const cartButton=
-document.querySelector(
-".cart"
-);
-
+document.querySelector(".cart");
 
 if(!cartButton)return;
 
-
-cartButton.classList.remove(
-"cart-bump"
-);
-
+cartButton.classList.remove("cart-bump");
 
 void cartButton.offsetWidth;
 
-
-cartButton.classList.add(
-"cart-bump"
-);
+cartButton.classList.add("cart-bump");
 
 }
 
 
 /* =========================
-   TOAST
+TOAST
 ========================= */
 
 function showToast(
@@ -2531,17 +1933,11 @@ message="تمت إضافة المنتج للسلة ✓"
 ){
 
 const toast=
-document.getElementById(
-"toast"
-);
+document.getElementById("toast");
 
-
-toast.textContent=
-message;
-
+toast.textContent=message;
 
 toast.classList.add("show");
-
 
 setTimeout(()=>{
 
@@ -2553,48 +1949,35 @@ toast.classList.remove("show");
 
 
 /* =========================
-   UPDATE CART
+UPDATE CART
 ========================= */
 
 function updateCart(){
 
 const count=
 cart.reduce(
-
 (total,item)=>
 total+item.quantity,
-
 0
-
 );
 
-
-document.getElementById(
-"count"
-).textContent=count;
-
+document.getElementById("count")
+.textContent=count;
 
 const box=
-document.getElementById(
-"cartItems"
-);
-
+document.getElementById("cartItems");
 
 if(cart.length===0){
 
 box.innerHTML=
 "<p>السلة فارغة</p>";
 
-
-document.getElementById(
-"total"
-).textContent="0";
-
+document.getElementById("total")
+.textContent="0";
 
 return;
 
 }
-
 
 box.innerHTML=
 
@@ -2603,71 +1986,47 @@ cart.map(item=>{
 const p=
 products[item.index];
 
-
 return `
 
 <div class="cartrow">
 
-
 <div class="cartinfo">
 
-
 <div class="cartname">
-
 ${p.name}
-
 </div>
-
 
 <div class="cartprice">
-
-${p.price}
-جنيه للقطعة
-
+${p.price} جنيه للقطعة
 </div>
 
-
 </div>
-
 
 <div class="quantity">
 
-
 <button
 onclick="changeQuantity(${item.index},-1)">
-
 −
-
 </button>
 
-
 <span>
-
 ${item.quantity}
-
 </span>
-
 
 <button
 onclick="changeQuantity(${item.index},1)">
-
 +
-
 </button>
-
 
 </div>
 
-
 <button
 class="remove"
-title="حذف المنتج"
 onclick="removeFromCart(${item.index})">
 
 🗑️
 
 </button>
-
 
 </div>
 
@@ -2675,15 +2034,13 @@ onclick="removeFromCart(${item.index})">
 
 }).join("");
 
-
 const total=
 cart.reduce(
 
 (sum,item)=>
 sum+
 (
-products[item.index].price
-*
+products[item.index].price*
 item.quantity
 ),
 
@@ -2691,34 +2048,26 @@ item.quantity
 
 );
 
-
-document.getElementById(
-"total"
-).textContent=total;
+document.getElementById("total")
+.textContent=total;
 
 }
 
 
 /* =========================
-   CHANGE QUANTITY
+QUANTITY
 ========================= */
 
-function changeQuantity(
-index,
-change
-){
+function changeQuantity(index,change){
 
 const item=
 cart.find(
 item=>item.index===index
 );
 
-
 if(!item)return;
 
-
 item.quantity+=change;
-
 
 if(item.quantity<=0){
 
@@ -2727,13 +2076,11 @@ cart.filter(
 item=>item.index!==index
 );
 
-
 showToast(
 "تم حذف المنتج من السلة"
 );
 
 }
-
 
 updateCart();
 
@@ -2741,7 +2088,7 @@ updateCart();
 
 
 /* =========================
-   REMOVE
+REMOVE
 ========================= */
 
 function removeFromCart(index){
@@ -2751,9 +2098,7 @@ cart.filter(
 item=>item.index!==index
 );
 
-
 updateCart();
-
 
 showToast(
 "تم حذف المنتج من السلة"
@@ -2763,36 +2108,33 @@ showToast(
 
 
 /* =========================
-   OPEN CART
+OPEN CART
 ========================= */
 
 function openCart(){
 
 updateCart();
 
-
-document.getElementById(
-"modal"
-).style.display="block";
+document.getElementById("modal")
+.style.display="block";
 
 }
 
 
 /* =========================
-   CLOSE CART
+CLOSE CART
 ========================= */
 
 function closeCart(){
 
-document.getElementById(
-"modal"
-).style.display="none";
+document.getElementById("modal")
+.style.display="none";
 
 }
 
 
 /* =========================
-   OPEN IMAGE
+IMAGE
 ========================= */
 
 function openImage(index){
@@ -2800,27 +2142,14 @@ function openImage(index){
 const product=
 products[index];
 
+document.getElementById("largeImage")
+.src=product.image;
 
-const largeImage=
-document.getElementById(
-"largeImage"
-);
-
-
-largeImage.src=
-product.image;
-
-
-document.getElementById(
-"imageModal"
-).style.display="flex";
+document.getElementById("imageModal")
+.style.display="flex";
 
 }
 
-
-/* =========================
-   CLOSE IMAGE
-========================= */
 
 function closeImage(event){
 
@@ -2833,87 +2162,65 @@ return;
 
 }
 
+document.getElementById("imageModal")
+.style.display="none";
 
-document.getElementById(
-"imageModal"
-).style.display="none";
-
-
-document.getElementById(
-"largeImage"
-).src="";
+document.getElementById("largeImage")
+.src="";
 
 }
 
 
 /* =========================
-   WHATSAPP ORDER
+WHATSAPP
 ========================= */
 
 function orderWhatsApp(){
 
 if(cart.length===0){
 
-showToast(
-"السلة فارغة"
-);
+showToast("السلة فارغة");
 
 return;
 
 }
 
-
 const name=
-document.getElementById(
-"name"
-).value.trim()
+document.getElementById("name")
+.value.trim()
 ||
 "غير محدد";
-
 
 const phone=
-document.getElementById(
-"phone"
-).value.trim()
+document.getElementById("phone")
+.value.trim()
 ||
 "غير محدد";
-
 
 const address=
-document.getElementById(
-"address"
-).value.trim()
+document.getElementById("address")
+.value.trim()
 ||
 "غير محدد";
-
 
 let message=
 "طلب جديد من Marmar\n\n";
 
-
-cart.forEach(
-(item,i)=>{
+cart.forEach((item,i)=>{
 
 const p=
 products[item.index];
 
-
 message+=
-
-(i+1)+
-". "+
+(i+1)+". "+
 p.name+
 " × "+
 item.quantity+
 " = "+
-(
-p.price*
-item.quantity
-)+
+(p.price*item.quantity)+
 " جنيه\n";
 
 });
-
 
 const total=
 cart.reduce(
@@ -2921,8 +2228,7 @@ cart.reduce(
 (sum,item)=>
 sum+
 (
-products[item.index].price
-*
+products[item.index].price*
 item.quantity
 ),
 
@@ -2930,38 +2236,30 @@ item.quantity
 
 );
 
-
 message+=
 "\nالإجمالي: "+
 total+
 " جنيه\n";
-
 
 message+=
 "الاسم: "+
 name+
 "\n";
 
-
 message+=
 "الهاتف: "+
 phone+
 "\n";
 
-
 message+=
 "العنوان: "+
 address;
-
 
 const whatsappURL=
 "https://wa.me/"+
 WHATSAPP_NUMBER+
 "?text="+
-encodeURIComponent(
-message
-);
-
+encodeURIComponent(message);
 
 window.open(
 whatsappURL,
@@ -2972,7 +2270,7 @@ whatsappURL,
 
 
 /* =========================
-   CLOSE CART OUTSIDE
+OUTSIDE CLICK
 ========================= */
 
 document
@@ -2990,10 +2288,6 @@ closeCart();
 });
 
 
-/* =========================
-   ESC
-========================= */
-
 document.addEventListener(
 "keydown",
 function(event){
@@ -3004,7 +2298,6 @@ document.getElementById(
 "imageModal"
 ).style.display="none";
 
-
 closeProductsMenu();
 
 closeCategoryDropdown();
@@ -3013,10 +2306,6 @@ closeCategoryDropdown();
 
 });
 
-
-/* =========================
-   CLOSE MENUS OUTSIDE
-========================= */
 
 document.addEventListener(
 "click",
@@ -3027,12 +2316,10 @@ document.getElementById(
 "productsMenu"
 );
 
-
 const categoryMenu=
 document.querySelector(
 ".title-row"
 );
-
 
 if(
 navMenu &&
@@ -3042,7 +2329,6 @@ navMenu &&
 closeProductsMenu();
 
 }
-
 
 if(
 categoryMenu &&
@@ -3057,33 +2343,24 @@ closeCategoryDropdown();
 
 
 /* =========================
-   START
+START
 ========================= */
 
 renderAllProducts();
 
-
-/* =========================
-   OBSERVER
-========================= */
 
 const animationObserver=
 new IntersectionObserver(
 
 (entries,observer)=>{
 
-entries.forEach(
-entry=>{
+entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add(
-"show"
-);
+entry.target.classList.add("show");
 
-observer.unobserve(
-entry.target
-);
+observer.unobserve(entry.target);
 
 }
 
@@ -3091,17 +2368,14 @@ entry.target
 
 },
 
-{
-threshold:.15
-}
+{threshold:.15}
 
 );
 
 
 document
 .querySelectorAll(".title")
-.forEach(
-title=>{
+.forEach(title=>{
 
 animationObserver.observe(title);
 
@@ -3110,13 +2384,11 @@ animationObserver.observe(title);
 
 document
 .querySelectorAll(".about")
-.forEach(
-about=>{
+.forEach(about=>{
 
 animationObserver.observe(about);
 
 });
-
 
 </script>
 
