@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -11,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -70,7 +72,7 @@ body{
     color:#a87552;
 }
 
-/* منتجاتنا */
+/* ================= PRODUCTS MENU ================= */
 
 .products-menu{
     position:relative;
@@ -186,7 +188,6 @@ body{
     text-align:center;
     padding:70px 20px;
 
-    /* اللوجو كخلفية */
     background:
         linear-gradient(
             rgba(250,247,242,.78),
@@ -655,6 +656,7 @@ footer{
         opacity:0;
         transform:translateY(-8px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -670,6 +672,7 @@ footer{
         opacity:0;
         transform:translateY(15px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -794,6 +797,7 @@ footer{
         height:58px;
     }
 }
+
 </style>
 </head>
 
@@ -811,57 +815,75 @@ footer{
 
         <div class="products-menu" id="productsMenu">
 
-            <button class="products-main" onclick="toggleProductsMenu()">
+            <button
+                class="products-main"
+                type="button"
+                onclick="toggleProductsMenu()"
+            >
                 منتجاتنا
                 <span class="chevron"></span>
             </button>
 
             <div class="products-dropdown">
 
-                <button onclick="showAllProducts()">
+                <button type="button" onclick="showAllProducts()">
                     كل المنتجات
                 </button>
 
-                <button onclick="openCategory('wall')">
+                <button type="button" onclick="openCategory('wall')">
                     مكرميات حائط
                 </button>
 
-                <button onclick="openCategory('plant')">
+                <button type="button" onclick="openCategory('plant')">
                     حوامل نباتات
                 </button>
 
-                <button onclick="openCategory('mirror')">
+                <button type="button" onclick="openCategory('mirror')">
                     مرايات
                 </button>
 
-                <button onclick="openCategory('decor')">
+                <button type="button" onclick="openCategory('decor')">
                     ديكورات
                 </button>
 
-                <button onclick="openCategory('gift')">
+                <button type="button" onclick="openCategory('gift')">
                     هدايا
                 </button>
 
-                <button onclick="openCategory('custom')">
+                <button type="button" onclick="openCategory('custom')">
                     تصميمات مخصصة
                 </button>
 
             </div>
+
         </div>
 
         <a href="#about">عن Marmar</a>
 
-        <button class="cart" onclick="openCart">
+        <!-- زر السلة -->
+        <button
+            class="cart"
+            type="button"
+            onclick="openCart()"
+        >
 
-            <svg class="ui-icon" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="1.7"
-                 stroke-linecap="round" stroke-linejoin="round">
+            <svg
+                class="ui-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
                 <path d="M6 8h12l1 12H5L6 8Z"/>
                 <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
             </svg>
 
             <span>السلة</span>
-            (<span id="count">0</span>)
+
+            <!-- بدون أقواس -->
+            <span id="count">0</span>
 
         </button>
 
@@ -901,7 +923,11 @@ footer{
 
             <h2>منتجاتنا</h2>
 
-            <button class="title-arrow" onclick="toggleCategoryDropdown()">
+            <button
+                class="title-arrow"
+                type="button"
+                onclick="toggleCategoryDropdown()"
+            >
                 <span class="chevron"></span>
             </button>
 
@@ -909,65 +935,84 @@ footer{
 
     </div>
 
-    <div class="category-dropdown" id="categoryDropdown">
+    <div
+        class="category-dropdown"
+        id="categoryDropdown"
+    >
 
-        <button onclick="showAllProducts()">
+        <button type="button" onclick="showAllProducts()">
             كل المنتجات
         </button>
 
-        <button onclick="openCategory('wall')">
+        <button type="button" onclick="openCategory('wall')">
             مكرميات حائط
         </button>
 
-        <button onclick="openCategory('plant')">
+        <button type="button" onclick="openCategory('plant')">
             حوامل نباتات
         </button>
 
-        <button onclick="openCategory('mirror')">
+        <button type="button" onclick="openCategory('mirror')">
             مرايات
         </button>
 
-        <button onclick="openCategory('decor')">
+        <button type="button" onclick="openCategory('decor')">
             ديكورات
         </button>
 
-        <button onclick="openCategory('gift')">
+        <button type="button" onclick="openCategory('gift')">
             هدايا
         </button>
 
-        <button onclick="openCategory('custom')">
+        <button type="button" onclick="openCategory('custom')">
             تصميمات مخصصة
         </button>
 
     </div>
 
-    <div class="products-grid" id="productsGrid"></div>
+    <div
+        class="products-grid"
+        id="productsGrid"
+    ></div>
 
 </section>
 
 
 <!-- ================= CATEGORY PAGE ================= -->
 
-<section class="category-page" id="categoryPage">
+<section
+    class="category-page"
+    id="categoryPage"
+>
 
     <div class="category-header">
 
         <h2 id="categoryTitle"></h2>
 
-        <button class="back-products" onclick="showAllProducts()">
+        <button
+            class="back-products"
+            type="button"
+            onclick="showAllProducts()"
+        >
             العودة إلى كل المنتجات
         </button>
 
     </div>
 
-    <div class="products-grid" id="categoryGrid"></div>
+    <div
+        class="products-grid"
+        id="categoryGrid"
+    ></div>
 
 </section>
 
 
 <!-- ================= ABOUT ================= -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about"
+>
 
     <h2>عن Marmar</h2>
 
@@ -988,7 +1033,10 @@ footer{
 
 <!-- ================= CART MODAL ================= -->
 
-<div class="modal" id="cartModal">
+<div
+    class="modal"
+    id="cartModal"
+>
 
     <div class="cart-box">
 
@@ -996,7 +1044,11 @@ footer{
 
             <h2>سلة المشتريات</h2>
 
-            <button class="close-modal" onclick="closeCart()">
+            <button
+                class="close-modal"
+                type="button"
+                onclick="closeCart()"
+            >
                 ×
             </button>
 
@@ -1009,12 +1061,17 @@ footer{
             <span>الإجمالي</span>
 
             <span>
-                <span id="total">0</span> جنيه
+                <span id="total">0</span>
+                جنيه
             </span>
 
         </div>
 
-        <button class="whatsapp-btn" onclick="sendOrder()">
+        <button
+            class="whatsapp-btn"
+            type="button"
+            onclick="sendOrder()"
+        >
             إرسال الطلب عبر واتساب
         </button>
 
@@ -1025,20 +1082,34 @@ footer{
 
 <!-- ================= IMAGE MODAL ================= -->
 
-<div class="image-modal" id="imageModal">
+<div
+    class="image-modal"
+    id="imageModal"
+>
 
-    <button class="close-image" onclick="closeImage()">
+    <button
+        class="close-image"
+        type="button"
+        onclick="closeImage()"
+    >
         ×
     </button>
 
-    <img id="fullImage" src="" alt="صورة المنتج">
+    <img
+        id="fullImage"
+        src=""
+        alt="صورة المنتج"
+    >
 
 </div>
 
 
 <!-- ================= TOAST ================= -->
 
-<div class="toast" id="toast">
+<div
+    class="toast"
+    id="toast"
+>
     تمت إضافة المنتج إلى السلة
 </div>
 
@@ -1141,7 +1212,7 @@ const categoryNames = {
 let cart = [];
 
 
-/* ================= CREATE PRODUCT ================= */
+/* ================= CREATE PRODUCT CARD ================= */
 
 function createProductCard(product){
 
@@ -1158,9 +1229,13 @@ function createProductCard(product){
 
             <div class="product-info">
 
-                <h3>${product.arabicName}</h3>
+                <h3>
+                    ${product.arabicName}
+                </h3>
 
-                <p>${product.description}</p>
+                <p>
+                    ${product.description}
+                </p>
 
                 <div class="price">
                     ${product.price} جنيه
@@ -1168,6 +1243,7 @@ function createProductCard(product){
 
                 <button
                     class="add-cart"
+                    type="button"
                     onclick="addToCart(${product.id})"
                 >
                     إضافة إلى السلة
@@ -1182,7 +1258,7 @@ function createProductCard(product){
 }
 
 
-/* ================= SHOW ALL ================= */
+/* ================= SHOW ALL PRODUCTS ================= */
 
 function renderAllProducts(){
 
@@ -1199,32 +1275,39 @@ function renderAllProducts(){
 
 function openCategory(category){
 
-    const categoryPage = document.getElementById("categoryPage");
+    const categoryPage =
+        document.getElementById("categoryPage");
 
-    const categoryGrid = document.getElementById("categoryGrid");
+    const categoryGrid =
+        document.getElementById("categoryGrid");
 
-    const categoryTitle = document.getElementById("categoryTitle");
+    const categoryTitle =
+        document.getElementById("categoryTitle");
 
-    const productsSection = document.getElementById("products");
+    const productsSection =
+        document.getElementById("products");
 
-    const filtered = products.filter(
-        product => product.category === category
-    );
+    const filtered =
+        products.filter(
+            product => product.category === category
+        );
 
-    categoryTitle.textContent = categoryNames[category];
+    categoryTitle.textContent =
+        categoryNames[category];
 
-    categoryGrid.innerHTML = filtered
-        .map(createProductCard)
-        .join("");
+    categoryGrid.innerHTML =
+        filtered.map(createProductCard).join("");
 
     productsSection.style.display = "none";
 
     categoryPage.classList.add("show");
 
-    document.getElementById("categoryDropdown")
+    document
+        .getElementById("categoryDropdown")
         .classList.remove("show");
 
-    document.getElementById("productsMenu")
+    document
+        .getElementById("productsMenu")
         .classList.remove("active");
 
     window.scrollTo({
@@ -1235,24 +1318,30 @@ function openCategory(category){
 }
 
 
-/* ================= SHOW ALL PRODUCTS ================= */
+/* ================= SHOW ALL ================= */
 
 function showAllProducts(){
 
-    document.getElementById("products").style.display = "block";
+    document
+        .getElementById("products")
+        .style.display = "block";
 
-    document.getElementById("categoryPage")
+    document
+        .getElementById("categoryPage")
         .classList.remove("show");
 
-    document.getElementById("categoryDropdown")
+    document
+        .getElementById("categoryDropdown")
         .classList.remove("show");
 
-    document.getElementById("productsMenu")
+    document
+        .getElementById("productsMenu")
         .classList.remove("active");
 
     renderAllProducts();
 
-    document.getElementById("products")
+    document
+        .getElementById("products")
         .scrollIntoView({
             behavior:"smooth"
         });
@@ -1264,7 +1353,8 @@ function showAllProducts(){
 
 function toggleCategoryDropdown(){
 
-    document.getElementById("categoryDropdown")
+    document
+        .getElementById("categoryDropdown")
         .classList.toggle("show");
 
 }
@@ -1274,7 +1364,8 @@ function toggleCategoryDropdown(){
 
 function toggleProductsMenu(){
 
-    document.getElementById("productsMenu")
+    document
+        .getElementById("productsMenu")
         .classList.toggle("active");
 
 }
@@ -1284,13 +1375,19 @@ function toggleProductsMenu(){
 
 function addToCart(id){
 
-    const product = products.find(
-        product => product.id === id
-    );
+    const product =
+        products.find(
+            product => product.id === id
+        );
 
-    const existing = cart.find(
-        item => item.id === id
-    );
+    if(!product){
+        return;
+    }
+
+    const existing =
+        cart.find(
+            item => item.id === id
+        );
 
     if(existing){
 
@@ -1316,31 +1413,46 @@ function addToCart(id){
 
 function updateCart(){
 
-    const count = document.getElementById("count");
+    const count =
+        document.getElementById("count");
 
-    const total = document.getElementById("total");
+    const total =
+        document.getElementById("total");
 
-    const cartItems = document.getElementById("cartItems");
+    const cartItems =
+        document.getElementById("cartItems");
 
-    const totalQuantity = cart.reduce(
-        (sum,item) => sum + item.quantity,
-        0
-    );
+    const totalQuantity =
+        cart.reduce(
+            (sum,item) =>
+                sum + item.quantity,
+            0
+        );
 
-    const totalPrice = cart.reduce(
-        (sum,item) => sum + item.price * item.quantity,
-        0
-    );
+    const totalPrice =
+        cart.reduce(
+            (sum,item) =>
+                sum + item.price * item.quantity,
+            0
+        );
 
-    count.textContent = totalQuantity;
+    count.textContent =
+        totalQuantity;
 
-    total.textContent = totalPrice;
+    total.textContent =
+        totalPrice;
 
 
     if(cart.length === 0){
 
         cartItems.innerHTML = `
-            <p style="text-align:center;color:#87756b;padding:30px 0;">
+            <p
+                style="
+                    text-align:center;
+                    color:#87756b;
+                    padding:30px 0;
+                "
+            >
                 السلة فارغة
             </p>
         `;
@@ -1350,7 +1462,8 @@ function updateCart(){
     }
 
 
-    cartItems.innerHTML = cart.map(item => `
+    cartItems.innerHTML =
+        cart.map(item => `
 
         <div class="cart-item">
 
@@ -1361,19 +1474,31 @@ function updateCart(){
 
             <div class="cart-item-info">
 
-                <h4>${item.arabicName}</h4>
+                <h4>
+                    ${item.arabicName}
+                </h4>
 
-                <p>${item.price} جنيه</p>
+                <p>
+                    ${item.price} جنيه
+                </p>
 
                 <div class="quantity">
 
-                    <button onclick="changeQuantity(${item.id},-1)">
+                    <button
+                        type="button"
+                        onclick="changeQuantity(${item.id},-1)"
+                    >
                         −
                     </button>
 
-                    <span>${item.quantity}</span>
+                    <span>
+                        ${item.quantity}
+                    </span>
 
-                    <button onclick="changeQuantity(${item.id},1)">
+                    <button
+                        type="button"
+                        onclick="changeQuantity(${item.id},1)"
+                    >
                         +
                     </button>
 
@@ -1383,6 +1508,7 @@ function updateCart(){
 
             <button
                 class="remove"
+                type="button"
                 title="حذف المنتج"
                 onclick="removeFromCart(${item.id})"
             >
@@ -1422,19 +1548,23 @@ function updateCart(){
 
 function changeQuantity(id,change){
 
-    const item = cart.find(
-        item => item.id === id
-    );
+    const item =
+        cart.find(
+            item => item.id === id
+        );
 
-    if(!item) return;
+    if(!item){
+        return;
+    }
 
     item.quantity += change;
 
     if(item.quantity <= 0){
 
-        cart = cart.filter(
-            item => item.id !== id
-        );
+        cart =
+            cart.filter(
+                item => item.id !== id
+            );
 
     }
 
@@ -1447,9 +1577,10 @@ function changeQuantity(id,change){
 
 function removeFromCart(id){
 
-    cart = cart.filter(
-        item => item.id !== id
-    );
+    cart =
+        cart.filter(
+            item => item.id !== id
+        );
 
     updateCart();
 
@@ -1462,7 +1593,8 @@ function removeFromCart(id){
 
 function openCart(){
 
-    document.getElementById("cartModal")
+    document
+        .getElementById("cartModal")
         .classList.add("show");
 
     updateCart();
@@ -1474,27 +1606,34 @@ function openCart(){
 
 function closeCart(){
 
-    document.getElementById("cartModal")
+    document
+        .getElementById("cartModal")
         .classList.remove("show");
 
 }
 
 
-/* ================= IMAGE ================= */
+/* ================= OPEN IMAGE ================= */
 
 function openImage(src){
 
-    document.getElementById("fullImage").src = src;
+    document
+        .getElementById("fullImage")
+        .src = src;
 
-    document.getElementById("imageModal")
+    document
+        .getElementById("imageModal")
         .classList.add("show");
 
 }
 
 
+/* ================= CLOSE IMAGE ================= */
+
 function closeImage(){
 
-    document.getElementById("imageModal")
+    document
+        .getElementById("imageModal")
         .classList.remove("show");
 
 }
@@ -1512,8 +1651,8 @@ function sendOrder(){
 
     }
 
-
-    let message = "مرحباً Marmar، أريد طلب المنتجات التالية:%0A%0A";
+    let message =
+        "مرحباً Marmar، أريد طلب المنتجات التالية:\n\n";
 
     cart.forEach(item => {
 
@@ -1524,28 +1663,30 @@ function sendOrder(){
             item.quantity +
             " = " +
             (item.price * item.quantity) +
-            " جنيه%0A";
+            " جنيه\n";
 
     });
 
-
-    const totalPrice = cart.reduce(
-        (sum,item) => sum + item.price * item.quantity,
-        0
-    );
-
+    const totalPrice =
+        cart.reduce(
+            (sum,item) =>
+                sum + item.price * item.quantity,
+            0
+        );
 
     message +=
-        "%0Aالإجمالي: " +
+        "\nالإجمالي: " +
         totalPrice +
         " جنيه";
 
-
-    window.open(
+    const whatsappURL =
         "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
-        message,
+        encodeURIComponent(message);
+
+    window.open(
+        whatsappURL,
         "_blank"
     );
 
@@ -1556,36 +1697,106 @@ function sendOrder(){
 
 function showToast(message){
 
-    const toast = document.getElementById("toast");
+    const toast =
+        document.getElementById("toast");
 
-    toast.textContent = message;
+    toast.textContent =
+        message;
 
     toast.classList.add("show");
 
-    setTimeout(() => {
-
-        toast.classList.remove("show");
-
-    },2000);
+    setTimeout(
+        () => {
+            toast.classList.remove("show");
+        },
+        2000
+    );
 
 }
 
 
-/* ================= CLOSE WHEN CLICK OUTSIDE ================= */
+/* ================= CLOSE NAV MENU OUTSIDE ================= */
 
-document.addEventListener("click",function(event){
+document.addEventListener(
+    "click",
+    function(event){
 
-    const menu = document.getElementById("productsMenu");
+        const menu =
+            document.getElementById("productsMenu");
 
-    if(
-        !menu.contains(event.target)
-    ){
+        if(
+            menu &&
+            !menu.contains(event.target)
+        ){
 
-        menu.classList.remove("active");
+            menu.classList.remove("active");
+
+        }
 
     }
+);
 
-});
+
+/* ================= CLOSE CART BY CLICKING OUTSIDE ================= */
+
+document
+    .getElementById("cartModal")
+    .addEventListener(
+        "click",
+        function(event){
+
+            if(
+                event.target === this
+            ){
+
+                closeCart();
+
+            }
+
+        }
+    );
+
+
+/* ================= CLOSE IMAGE BY CLICKING OUTSIDE ================= */
+
+document
+    .getElementById("imageModal")
+    .addEventListener(
+        "click",
+        function(event){
+
+            if(
+                event.target === this
+            ){
+
+                closeImage();
+
+            }
+
+        }
+    );
+
+
+/* ================= ESC KEY ================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeCart();
+
+            closeImage();
+
+            document
+                .getElementById("productsMenu")
+                .classList.remove("active");
+
+        }
+
+    }
+);
 
 
 /* ================= INITIAL ================= */
