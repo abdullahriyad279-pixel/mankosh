@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -679,6 +678,352 @@ footer{
     }
 }
 
+
+/* ================= EXTRA ANIMATIONS ================= */
+
+body{
+    animation:pageReveal .7s ease both;
+}
+
+@keyframes pageReveal{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.navbar{
+    animation:navReveal .7s ease both;
+}
+
+@keyframes navReveal{
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content{
+    animation:heroReveal 1s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes heroReveal{
+    from{
+        opacity:0;
+        transform:translateY(35px) scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.hero h1{
+    animation:heroTitle 1s cubic-bezier(.22,1,.36,1) .1s both;
+}
+
+@keyframes heroTitle{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+        letter-spacing:8px;
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+        letter-spacing:1px;
+    }
+}
+
+.hero p{
+    animation:heroText .8s ease .3s both;
+}
+
+@keyframes heroText{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-btn{
+    animation:heroButton .8s cubic-bezier(.22,1,.36,1) .5s both;
+}
+
+@keyframes heroButton{
+    from{
+        opacity:0;
+        transform:translateY(18px) scale(.94);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.section-title{
+    animation:sectionTitleReveal .7s ease both;
+}
+
+@keyframes sectionTitleReveal{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.product-card{
+    will-change:transform;
+}
+
+.product-card:hover{
+    transform:translateY(-7px) scale(1.015);
+}
+
+.product-image{
+    transition:
+        transform .5s cubic-bezier(.22,1,.36,1),
+        filter .4s ease;
+}
+
+.product-card:hover .product-image{
+    transform:scale(1.045);
+}
+
+.add-cart{
+    position:relative;
+    overflow:hidden;
+}
+
+.add-cart::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:70%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.22),
+        transparent
+    );
+    transform:skewX(-20deg);
+}
+
+.add-cart:hover::after{
+    animation:buttonShine .7s ease;
+}
+
+@keyframes buttonShine{
+    from{
+        left:-120%;
+    }
+    to{
+        left:150%;
+    }
+}
+
+.cart:active{
+    transform:scale(.94);
+}
+
+.add-cart:active{
+    transform:scale(.97);
+}
+
+.modal.show .cart-box{
+    animation:cartOpen .45s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes cartOpen{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.94);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.modal.show{
+    animation:modalFade .25s ease both;
+}
+
+@keyframes modalFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.cart-item{
+    animation:cartItemReveal .35s ease both;
+}
+
+@keyframes cartItemReveal{
+    from{
+        opacity:0;
+        transform:translateX(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.remove:hover .delete-icon{
+    animation:trashShake .35s ease;
+}
+
+@keyframes trashShake{
+    0%,100%{
+        transform:rotate(0);
+    }
+    25%{
+        transform:rotate(-7deg);
+    }
+    75%{
+        transform:rotate(7deg);
+    }
+}
+
+.image-modal.show img{
+    animation:imageReveal .45s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes imageReveal{
+    from{
+        opacity:0;
+        transform:scale(.88);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.image-modal.show{
+    animation:modalFade .25s ease both;
+}
+
+.toast.show{
+    animation:toastPop .4s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes toastPop{
+    from{
+        opacity:0;
+        transform:translate(-50%,25px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translate(-50%,0) scale(1);
+    }
+}
+
+.products-menu.active .products-dropdown{
+    animation:dropdownReveal .3s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes dropdownReveal{
+    from{
+        opacity:0;
+        transform:translateY(-10px) scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.category-dropdown.show{
+    animation:categoryReveal .35s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes categoryReveal{
+    from{
+        opacity:0;
+        transform:translateY(-12px) scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.category-dropdown button,
+.products-dropdown button{
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.category-dropdown button:hover,
+.products-dropdown button:hover{
+    transform:translateX(-4px);
+}
+
+.title-arrow:hover .chevron{
+    transform:rotate(45deg) scale(1.15);
+}
+
+.products-menu.active .chevron{
+    animation:chevronMove .3s ease both;
+}
+
+@keyframes chevronMove{
+    from{
+        transform:rotate(45deg);
+    }
+    to{
+        transform:rotate(225deg);
+    }
+}
+
+footer{
+    animation:footerReveal .8s ease both;
+}
+
+@keyframes footerReveal{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:900px){
@@ -860,7 +1205,6 @@ footer{
 
         <a href="#about">عن Marmar</a>
 
-        <!-- زر السلة -->
         <button
             class="cart"
             type="button"
@@ -882,7 +1226,6 @@ footer{
 
             <span>السلة</span>
 
-            <!-- بدون أقواس -->
             <span id="count">0</span>
 
         </button>
