@@ -185,13 +185,25 @@ body{
     justify-content:center;
     text-align:center;
     padding:70px 20px;
+
+    /* اللوجو كخلفية */
     background:
-        linear-gradient(rgba(250,247,242,.72),rgba(250,247,242,.9)),
-        radial-gradient(circle at top,#ead9ca,transparent 60%);
+        linear-gradient(
+            rgba(250,247,242,.78),
+            rgba(250,247,242,.90)
+        ),
+        url("شعار ماكرامي فاخر باسم مارمار.png");
+
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:min(520px,75vw);
+    background-attachment:scroll;
 }
 
 .hero-content{
     max-width:750px;
+    position:relative;
+    z-index:2;
 }
 
 .hero h1{
@@ -688,6 +700,10 @@ footer{
     .nav-links{
         gap:12px;
     }
+
+    .hero{
+        background-size:min(450px,82vw);
+    }
 }
 
 @media(max-width:600px){
@@ -722,6 +738,15 @@ footer{
     .hero{
         min-height:60vh;
         padding:55px 20px;
+
+        background-size:90vw;
+
+        background-image:
+            linear-gradient(
+                rgba(250,247,242,.82),
+                rgba(250,247,242,.92)
+            ),
+            url("شعار ماكرامي فاخر باسم مارمار.png");
     }
 
     .hero p{
@@ -826,9 +851,8 @@ footer{
 
         <a href="#about">عن Marmar</a>
 
-        <button class="cart" onclick="openCart()">
+        <button class="cart" onclick="openCart">
 
-            <!-- Shopping Bag SVG -->
             <svg class="ui-icon" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="1.7"
                  stroke-linecap="round" stroke-linejoin="round">
@@ -1357,8 +1381,6 @@ function updateCart(){
 
             </div>
 
-
-            <!-- زر حذف احترافي -->
             <button
                 class="remove"
                 title="حذف المنتج"
